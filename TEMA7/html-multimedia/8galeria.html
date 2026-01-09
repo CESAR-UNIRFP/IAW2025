@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+</head>
+<body>
+
+<style>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+</style>
+
+<div class="gallery">
+  <img src="https://picsum.photos/400?1" alt="">
+  <img src="https://picsum.photos/400?2" alt="">
+  <img src="https://picsum.photos/400?3" alt="">
+  <img src="https://picsum.photos/400?4" alt="">
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+</head>
+<body>
+<video id="myVideo" width="480" poster="https://picsum.photos/480/270" style="border-radius:10px;">
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  Tu navegador no soporta vídeo HTML5.
+</video>
+
+<br>
+<button onclick="playVid()">Reproducir</button>
+<button onclick="pauseVid()">Pausar</button>
+
+<script>
+  const vid = document.getElementById("myVideo");
+  function playVid() { vid.play(); }
+  function pauseVid() { vid.pause(); }
+</script>
+
+</body>
+</html>
