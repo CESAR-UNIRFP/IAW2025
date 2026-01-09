@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Block vs Inline</title>
+  <link rel="stylesheet" href="css/estilo4.css">
+</head>
+<body>
+
+<h2>1) Elementos por defecto</h2>
+<p class="box as-block">Soy un &lt;p&gt; (block por defecto): ocupo todo el ancho.</p>
+<span class="box as-inline">Soy un &lt;span&gt; (inline por defecto): me quedo en la misma línea</span>
+<span class="box as-inline">y yo también (inline).</span>
+
+<h2>2) Forzando display y comparando ancho/alto</h2>
+<div class="box as-block  w200h60">display: block<br>width/height: BIEN</div>
+<span class="box as-inline w200h60">display: inline (width/height: MAL)</span>
+<span class="box as-inlineblock w200h60">display: inline-block (width/height: BIEN)</span>
+
+<h2>3) Márgenes</h2>
+<div class="box as-block margins">block con margin: 16px (separa arriba/abajo y a los lados)</div>
+<span class="box as-inline margins">inline con margin: 16px (los verticales apenas separan)</span>
+<span class="box as-inline margins">otro inline</span>
+<a class="box as-block" href="www.marca.com">hola</a><a class="box as-block" href="www.marca.com">hola2</a>
+</body>
+</html>

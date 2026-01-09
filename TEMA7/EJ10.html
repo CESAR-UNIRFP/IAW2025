@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Unidades: absolutas vs relativas</title>
+  <link rel="stylesheet" href="css/estilo7.css">
+</head>
+<body>
+
+<h2>Unidades absolutas</h2>
+<div class="fila">
+  <div class="box px">160px × 60px</div>
+  <div class="box cm">5cm × 2cm</div>
+  <div class="box pt">180pt × 60pt</div>
+</div>
+
+<h2>Unidades relativas</h2>
+<div class="contenedor">
+  <p class="em">Texto 1.5em (depende del contenedor → 30px)</p>
+  <p class="rem">Texto 1.5rem (depende del root → ~24px)</p>
+
+  <div class="fila">
+    <div class="box w50">width: 50% (del contenedor)</div>
+    <div class="box vw">20vw × 6vh (del viewport)</div>
+  </div>
+</div>
+
+</body>
+</html>
