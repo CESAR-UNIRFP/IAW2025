@@ -1,0 +1,19 @@
+  body { font-family: system-ui, sans-serif; margin: 20px; }
+
+  .fila { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+  .box  { border: 1px solid #ddd; background: #f5f5f5; display:flex; align-items:center; justify-content:center; }
+
+  /* --- ABSOLUTAS (tamaño fijo) --- */
+  .px { width: 160px; height: 60px; }            /* píxeles */
+  .cm { width: 5cm;   height: 2cm; }             /* centímetros (en pantalla es aproximado) */
+  .pt { width: 180pt; height: 60pt; }            /* puntos tipográficos */
+
+  /* --- RELATIVAS (dependen del contexto) --- */
+  .contenedor { border:1px dashed #bbb; padding:12px; width: 400px; }
+  .contenedor { font-size: 20px; }               /* tamaño base del contenedor */
+
+  .em  { font-size: 1.5em; }                     /* relativo al contenedor (20px * 1.5 = 30px) */
+  .rem { font-size: 1.5rem; }                    /* relativo al root (normalmente 16px * 1.5 = 24px) */
+
+  .w50 { width: 50%; height: 48px; }             /* % relativo al ancho del contenedor */
+  .vw  { width: 20vw; height: 6vh; }             /* relativo a la ventana (viewport) */

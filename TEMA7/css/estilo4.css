@@ -1,0 +1,11 @@
+  body { font-family: system-ui, sans-serif; }
+
+  .box { border: 2px solid #4b5563; background:#f3f4f6; margin:8px; padding:8px; }
+
+  .as-block       { display:block; }          /* ocupa todo el ancho, salta de línea */
+  .as-inline      { display:inline; }         /* no salta de línea, ignora width/height */
+  .as-inlineblock { display:inline-block; }   /* no salta, PERO respeta width/height */
+
+  .w200h60 { width:200px; height:60px; }
+
+  .margins { margin:16px; }

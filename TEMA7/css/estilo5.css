@@ -1,0 +1,14 @@
+.block,
+li {
+  border: 2px solid blue;
+  padding: .5em;
+}
+
+ul {
+  display: block;
+  list-style: none;
+}
+
+.block {
+  display: block;
+}
