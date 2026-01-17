@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Final JavaScript ASIR</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Gestión de productos</h1>
+
+<!-- FORMULARIO -->
+<h2>Añadir producto</h2>
+
+<form id="formProducto">
+  <input type="text" id="nombre" placeholder="Nombre del producto">
+  <input type="number" id="precio" placeholder="Precio">
+  <button type="submit">Añadir</button>
+</form>
+
+<p id="mensaje" class="error"></p>
+
+<hr>
+
+<!-- LISTA -->
+<h2>Listado de productos</h2>
+<ul id="listaProductos"></ul>
+
+<script>
+// ----------------------------
+// 1. Cargar productos (AJAX)
+// ----------------------------
+fetch("productos.json")
+  .then(response => response.json())
+  .then(productos => {
+    productos.forEach(producto => {
+      añadirProductoALaLista(producto.nombre, producto.precio);
+    });
+  })
+  .catch(error => console.error("Error cargando JSON:", error));
+
+// ----------------------------
+// 2. Capturar formulario
+// ----------------------------
+let formulario = document.getElementById("formProducto");
+
+formulario.addEventListener("submit", function (event) {
+  event.preventDefault(); // evitar envío
+
+  let nombre = document.getElementById("nombre").value;
+  let precio = document.getElementById("precio").value;
+  let mensaje = document.getElementById("mensaje");
+
+  // ----------------------------
+  // 3. Validación
+  // ----------------------------
+  if (nombre === "" || precio === "") {
+    mensaje.textContent = "Todos los campos son obligatorios";
+    return;
+  }
+
+  mensaje.textContent = "";
+
+  // ----------------------------
+  // 4. Añadir al DOM
+  // ----------------------------
+  añadirProductoALaLista(nombre, precio);
+
+  // Limpiar formulario
+  formulario.reset();
+});
+
+// ----------------------------
+// 5. Función reutilizable
+// ----------------------------
+function añadirProductoALaLista(nombre, precio) {
+  let lista = document.getElementById("listaProductos");
+
+  let li = document.createElement("li");
+  li.textContent = nombre + " - " + precio + " €";
+
+  lista.appendChild(li);
+}
+</script>
+
+</body>
+</html>

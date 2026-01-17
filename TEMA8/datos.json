@@ -1,0 +1,5 @@
+[
+  { "nombre": "Servidor", "precio": 500 },
+  { "nombre": "Switch", "precio": 200 },
+  { "nombre": "Firewall", "precio": 350 }
+]

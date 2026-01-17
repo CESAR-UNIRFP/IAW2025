@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX con Fetch</title>
+</head>
+<body>
+
+<h2>Productos</h2>
+<ul id="lista"></ul>
+
+<script>
+fetch("datos.json")
+  .then(response => response.json())
+  .then(datos => {
+    let lista = document.getElementById("lista");
+
+    datos.forEach(producto => {
+      let li = document.createElement("li");
+      li.textContent = producto.nombre + " - " + producto.precio + "€";
+      lista.appendChild(li);
+    });
+  })
+  .catch(error => console.error("Error:", error));
+</script>
+
+</body>
+</html>

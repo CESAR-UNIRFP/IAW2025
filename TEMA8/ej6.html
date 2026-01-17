@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario</title>
+</head>
+<body>
+
+<h2>Formulario</h2>
+
+<form onsubmit="return validarFormulario()">
+  <input type="text" id="nombre" placeholder="Nombre">
+  <br><br>
+  <button type="submit">Enviar</button>
+</form>
+
+<script>
+function validarFormulario() {
+  let nombre = document.getElementById("nombre").value;
+
+  if (nombre === "") {
+    alert("El nombre es obligatorio");
+    return false;
+  }
+  if (nombre.length<8) {
+    alert("necesita mas caracteres");
+    return false;
+  }
+  alert("Formulario correcto");
+  return true;
+}
+</script>
+
+</body>
+</html>
